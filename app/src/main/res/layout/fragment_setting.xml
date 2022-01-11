@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:orientation="vertical"
+        tools:context=".Fragment.SettingFragment">
+
+        <RelativeLayout
+            android:id="@+id/mTopRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/circular_std"
+                android:text="@string/setting"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_15sdp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/mShare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:drawableLeft="@drawable/ic_share"
+            android:drawablePadding="@dimen/_15sdp"
+            android:fontFamily="@font/circular_std"
+            android:gravity="center_vertical"
+            android:text="@string/share_frnd"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_13sdp" />
+
+        <TextView
+            android:id="@+id/mRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:drawableLeft="@drawable/ic_rate"
+            android:drawablePadding="@dimen/_15sdp"
+            android:fontFamily="@font/circular_std"
+            android:gravity="center_vertical"
+            android:text="@string/rate"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_13sdp" />
+
+        <TextView
+            android:id="@+id/mFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:drawableLeft="@drawable/ic_message"
+            android:drawablePadding="@dimen/_15sdp"
+            android:fontFamily="@font/circular_std"
+            android:gravity="center_vertical"
+            android:text="@string/feedback"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_13sdp" />
+
+        <TextView
+            android:id="@+id/mPolicy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:drawableLeft="@drawable/ic_lock"
+            android:drawablePadding="@dimen/_15sdp"
+            android:drawableTint="@color/text_color"
+            android:fontFamily="@font/circular_std"
+            android:gravity="center_vertical"
+            android:text="@string/policy"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/_13sdp" />
+
+
+    </LinearLayout>
+</layout>

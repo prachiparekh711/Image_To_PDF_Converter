@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainRL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="@dimen/_5sdp"
+    android:layout_marginVertical="@dimen/_5sdp"
+    android:background="@drawable/image_bg">
+
+    <ImageView
+        android:id="@+id/mSelectedImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/image_selected_bg"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/mImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/_7sdp"
+        android:layout_marginVertical="@dimen/_2sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sample" />
+
+    <ImageView
+        android:id="@+id/mExpand"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/_10sdp"
+        android:padding="@dimen/_10sdp"
+        android:src="@drawable/ic_expand" />
+
+    <TextView
+        android:id="@+id/mCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/ic_count_circle"
+        android:fontFamily="@font/circular_std"
+        android:gravity="center"
+        android:text="1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        android:visibility="gone" />
+
+</RelativeLayout>

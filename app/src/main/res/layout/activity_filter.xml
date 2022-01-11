@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activity.FilterActivity">
+
+        <RelativeLayout
+            android:id="@+id/mTopRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_back"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/circular_std"
+                android:text="@string/filter"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_17sdp" />
+
+            <ImageView
+                android:id="@+id/mRecovery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:src="@drawable/ic_recovery" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/mImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/filterRL"
+            android:layout_below="@id/mTopRL"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/image_bg"
+            android:paddingHorizontal="@dimen/_18sdp" />
+
+        <ImageView
+            android:id="@+id/mImage1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/filterRL"
+            android:layout_below="@id/mTopRL"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/image_bg"
+            android:paddingHorizontal="@dimen/_18sdp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/filterRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/mDone">
+
+            <com.example.imagetopdfkotlin.views.CustomViewPager
+                android:id="@+id/filterPager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/_5sdp" />
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mDone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:background="@drawable/bottom_bg_card"
+            app:cardBackgroundColor="@color/green_btn"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="0dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_6sdp"
+                android:fontFamily="@font/circular_std"
+                android:gravity="center"
+                android:text="@string/save"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp" />
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</layout>

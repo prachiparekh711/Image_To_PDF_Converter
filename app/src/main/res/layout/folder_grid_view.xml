@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="@dimen/_5sdp"
+    android:layout_marginVertical="@dimen/_5sdp">
+
+    <ImageView
+        android:id="@+id/mImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/image_bg"
+        android:foreground="@color/bg_transparent"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/mAlbumName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/mCount"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:fontFamily="@font/circular_std"
+        android:maxLines="2"
+        android:text="Album name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13sdp" />
+
+    <TextView
+        android:id="@+id/mCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:fontFamily="@font/circular_std"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="Photos"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13sdp" />
+
+
+</RelativeLayout>

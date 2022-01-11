@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.imagetopdfkotlin">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_logo"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ImageToPDFkotlin.NoActionBar">
+        <activity android:name=".Activity.PolicyActivity" />
+        <activity android:name=".Activity.AllPDFActivity" />
+        <activity android:name=".Activity.SuccessActivity" />
+        <activity android:name=".Activity.SortingActivity" />
+        <activity android:name=".Activity.FilterActivity" />
+        <activity android:name=".Activity.DrawActivity" />
+        <activity android:name=".Activity.CropActivity" />
+        <activity android:name=".Activity.EditActivity" />
+        <activity android:name=".Activity.SelectionActivity" />
+        <activity android:name=".Activity.SelectedImageActivity" />
+        <activity android:name=".Activity.InnerFolderActivity" />
+        <activity android:name=".Activity.GalleryActivity" />
+        <activity android:name=".Activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

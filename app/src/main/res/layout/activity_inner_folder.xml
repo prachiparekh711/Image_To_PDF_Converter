@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activity.InnerFolderActivity">
+
+        <RelativeLayout
+            android:id="@+id/mTopRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:drawableLeft="@drawable/ic_back"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/circular_std"
+                android:text="@string/select_imgs"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_17sdp" />
+
+            <LinearLayout
+                android:id="@+id/mTopCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/mselectImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:fontFamily="@font/circular_std"
+                    android:text="@string/select_img"
+                    android:textColor="@color/text_color1"
+                    android:textSize="@dimen/_10sdp" />
+
+                <ImageView
+                    android:id="@+id/mCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/chage_checkbox" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/folderRec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/bottomRL"
+            android:layout_below="@id/mTopRL"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/image_grid_view" />
+
+        <com.yarolegovich.discretescrollview.DiscreteScrollView
+            android:id="@+id/picker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomRL"
+            android:layout_below="@id/mTopRL"
+            android:visibility="gone"
+            app:dsv_orientation="horizontal"
+            tools:listitem="@layout/expand_image_layout" />
+
+        <RelativeLayout
+            android:id="@+id/bottomRL"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_155sdp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bottom_bg_card">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mImageRec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/bottom_image_layout" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mImport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mImageRec"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/bottom_bg_card"
+                app:cardBackgroundColor="@color/red"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:id="@+id/mImportText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_6sdp"
+                    android:fontFamily="@font/circular_std"
+                    android:gravity="center"
+                    android:text="Import (0)"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp" />
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/loadRL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimationView"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_centerInParent="true"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="loading.json"
+                app:lottie_loop="true" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

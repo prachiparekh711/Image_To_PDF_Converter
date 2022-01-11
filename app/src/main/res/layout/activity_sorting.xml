@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activity.SortingActivity">
+
+        <RelativeLayout
+            android:id="@+id/mTopRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_back"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/circular_std"
+                android:text="@string/sorting"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_17sdp" />
+
+
+            <TextView
+                android:id="@+id/mDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/circular_std"
+                android:text="@string/done"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_10sdp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/mTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mTopRL"
+            android:fontFamily="@font/circular_std"
+            android:gravity="center_horizontal"
+            android:text="@string/tip"
+            android:textSize="@dimen/_10sdp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mImageRec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mTitle"
+            android:layout_margin="@dimen/_10sdp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            tools:listitem="@layout/selected_img_layout" />
+    </RelativeLayout>
+</layout>

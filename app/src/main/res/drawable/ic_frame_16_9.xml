@@ -1,0 +1,4 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_frame_16_9_selected" android:state_selected="true" />
+    <item android:drawable="@drawable/ic_frame_16_9_deselected" android:state_checked="false" />
+</selector>
